@@ -9,7 +9,7 @@ int* runningSum(int* nums, int numsSize, int* returnSize) {
     return nums;
 } 
 
-int main(){ /*Caso queira executar o programa no terminal ou no Visual Studi*/
+int main(){ /*Caso queira executar o programa no terminal ou no Visual Studio*/
     int *nums = NULL;
     printf("Defina o tamanho do vetor: ");
 
