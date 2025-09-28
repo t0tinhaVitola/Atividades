@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*A solution to the LeetCode problem "Richest Customer Wealth", which, given an [m x n] integer grid, returns the wealth that the richest customer has.*/
+
 int maximumWealth(int** accounts, int accountsSize, int* accountsColSize) {
     int maiorRiqueza = 0;
 
@@ -14,6 +16,7 @@ int maximumWealth(int** accounts, int accountsSize, int* accountsColSize) {
     }
     return maiorRiqueza;
 }
+
 int main(){ //Caso queira executar o programa no terminal ou no Visual Studio
     int** contas;
     int accountsSize = 2;
