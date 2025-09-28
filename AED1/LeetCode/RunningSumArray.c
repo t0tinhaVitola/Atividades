@@ -1,3 +1,8 @@
+/*
+A solution to the LeetCode problem "Running Sum of 1d Array", which, given an array, we calculate a running sum where Runningsum[i] is
+the sum of all elements from array[0] up to and including array[i].
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
