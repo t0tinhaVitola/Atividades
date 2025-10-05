@@ -1,4 +1,5 @@
-/**/
+/*A solution to the LeetCode problem "Two Sum", which, given an array of integers and a integer Target, return indices of the two numbers such that they add up to Target
+(Disclaimer: this solution has an time complexity of O(n²)*/
 
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     *returnSize = 0;
