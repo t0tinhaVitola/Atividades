@@ -17,7 +17,10 @@ Exemplos de entrada e saída do problema:
 - Saída: true;
 
 - Entrada: {5, 5, 10, 10, 20};
-- Saída: false.
+- Saída: false;
+
+- Entrada: {5, 5, 10, 20, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 5, 5, 20, 5, 20, 5}
+- Saída: true.
 
 ----------------------------------------
 
