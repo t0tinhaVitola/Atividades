@@ -26,6 +26,8 @@ Saída: {2, 3, 1};
 
 Complexidade do algoritmo final:
 
-Tempo: O(n*k);
-Espaço: O(1).
+  - Tempo: O(n*k);
+  - Espaço: O(1).
+
+
 Detalhes da Implementação: Contexto: Atividade prática realizada na plataforma do LeetCode (Problema 61) Código-fonte: Disponível no arquivo ".c" nesta pasta.
