@@ -7,8 +7,8 @@ struct TreeNode* invertTree(struct TreeNode* root) {
     if ( root == NULL ) 
         return NULL;
     
-    struct TreeNode* leftRoot = invertTree(root->left);
-    struct TreeNode* rightRoot = invertTree(root->right);
+    struct TreeNode* leftRoot = invertTree( root->left );
+    struct TreeNode* rightRoot = invertTree( root->right );
 
     root->right = leftRoot;
     root->left = rightRoot;
