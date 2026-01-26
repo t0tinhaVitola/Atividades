@@ -1,5 +1,5 @@
 /*
-A solution to the LeetCode problem, which, given the root of a binary tree, invert the tree, and return its root.
+A solution to the LeetCode problem "Invert Binary Tree", which, given the root of a binary tree, invert the tree, and return its root.
 
 */
 
