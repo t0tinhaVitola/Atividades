@@ -3,30 +3,36 @@ A solution to the LeetCode problem "Binary Tree Level Order Traversal", which, g
 
 */
 
-void traverse( struct TreeNode* root, int index, int* returnSize, int** returnColumnSizes, int** resultArray ) {
-    if ( root == NULL )
-        return;
-    if ( index >= *returnSize ) {
-        resultArray[index] = ( int* ) malloc ( 2000 * sizeof( int ) );
-        ( *returnColumnSizes )[ index ] = 0;
-        *returnSize += 1;
-    }
-    int row = index++;
-    int column = ( *returnColumnSizes )[ row ]++;
-
-    resultArray[ row ][ column ] = root->val;
-
-    traverse( root->left, index, returnSize, returnColumnSizes, resultArray );
-    traverse( root->right, index, returnSize, returnColumnSizes, resultArray );
-
-}
-
 int** levelOrder(struct TreeNode* root, int* returnSize, int** returnColumnSizes) {
-    int** resultArray = ( int** ) malloc ( 2000 * sizeof( int* ) );
-    *returnColumnSizes = ( int* ) malloc ( 2000 * sizeof( int ) );
+    if ( root == NULL ) {
+        *returnSize = 0;
+        return NULL;
+    }
+    
+    int** resultList = ( int** ) malloc ( 2000 *sizeof( int* ) );
+    *returnColumnSizes = ( int* ) malloc( 2000 * sizeof( int ) );
+
+    struct TreeNode* queue[2000];
+    int front = 0, rear = 0;
+
+    queue[rear++] = root;
     *returnSize = 0;
 
-    traverse( root, 0, returnSize, returnColumnSizes, resultArray );
+    while ( front < rear ) {
+        int nElements = rear - front;
+        resultList[*returnSize] = malloc( nElements * sizeof( int ) );
+        ( *returnColumnSizes )[*returnSize] = nElements;
 
-    return resultArray;
+        for ( int j = 0; j < nElements; j++ ) {
+            struct TreeNode* temp = queue[front++];
+            resultList[*returnSize][j] = temp->val;
+            
+            if ( temp->left != NULL )
+                queue[rear++] = temp->left;
+            if ( temp->right != NULL )
+                queue[rear++] = temp->right;
+        }
+        (*returnSize)++;    
+    }
+    return resultList;
 }
