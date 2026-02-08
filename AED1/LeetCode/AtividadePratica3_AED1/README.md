@@ -22,7 +22,7 @@ Saída: [40,20,60,10,30,50,70,null,null,25];
 Entrada:
 
 root = [4,2,7,1,3,null,null,null,null,null,null];
-val = 2000000000;
+val = 5;
 Saída: [4,2,7,1,3,5];
 
 Complexidade do algoritmo final:
